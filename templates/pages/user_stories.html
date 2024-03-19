@@ -11,19 +11,7 @@
 {% set dados_usuario_json = dados_usuario|tojson %}
 
 
-<div class="row">
-    <div class="col-sm-6 col-lg-8">
-        <p>User Stories generated from your board {{ board_name }}</p>
-    </div>
-    <div class="col-sm-6 col-lg-4 text-end">
-        <button onclick="window.print();" class="btn btn-warning"><i class="bi bi-printer-fill">&nbsp;</i>Print</button>
-        <!-- <button type=" button" onclick="window.location.href='{{ url_for( 'home') }}';">Back</button> -->
-        <a type="button" class="btn btn-success"
-            href="{{ url_for('export_to_trello',dados_usuario=dados_usuario_json) }}"><i
-                class="bi bi-arrow-bar-right"></i>
-            Export to trello</a>
-    </div>
-</div>
+
 
 <hr>
 
