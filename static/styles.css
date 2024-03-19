@@ -1,0 +1,82 @@
+/* Reset básico para remover paddings e margins padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+}
+
+nav {
+    background: #333333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav ul li small {
+    color: #bbb;
+}
+
+section {
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+td a {
+    color: #333;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin-top: 20px;
+}
+
+.left {
+    text-align: left;
+}

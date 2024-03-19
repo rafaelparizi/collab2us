@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h4>{% block title %}User Stories{% endblock title %}</h4>
+{% endblock header %}
+
+{% block content %}
+
+<h6>Data collected</h6>
+
+{% set dados_usuario_json = dados_usuario|tojson %}
+
+
+<div class="row">
+    <div class="col-sm-6 col-lg-8">
+        <p>User Stories generated from your board {{ board_name }}</p>
+    </div>
+    <div class="col-sm-6 col-lg-4 text-end">
+        <button onclick="window.print();" class="btn btn-warning"><i class="bi bi-printer-fill">&nbsp;</i>Print</button>
+        <!-- <button type=" button" onclick="window.location.href='{{ url_for( 'home') }}';">Back</button> -->
+        <a type="button" class="btn btn-success"
+            href="{{ url_for('export_to_trello',dados_usuario=dados_usuario_json) }}"><i
+                class="bi bi-arrow-bar-right"></i>
+            Export to trello</a>
+    </div>
+</div>
+
+<hr>
+
+<div class="text-center">
+    <div class="row">
+        <div class="col-3">
+            <h5 class="text-start"> Personas </h5>
+            <ul class="left text-left">
+                {% for sticker in stickers_personas %}
+                <li class="text-start list-group list-group-flush">{{ sticker['content'] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-3">
+            <h5 class="text-start"> Features </h5>
+            <ul class="left text-left">
+                {% for sticker in stickers_features %}
+                <li class="text-start">{{ sticker['content'] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-6">
+            <h5 class="text-start"> PBIs </h5>
+            <ul class="left">
+                {% for sticker in stickers_pbi %}
+                <li class="text-start">{{ sticker['content'] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-12">
+            <h5 class="text-start"> User Stories </h5>
+            <ul class="left">
+                {% for user_story in user_stories_created %}
+                <li class="text-start">{{ user_story }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+
+<span class="navbar-text text-end">
+    Logged as: {% print(dados_usuario['user']) %}
+</span>

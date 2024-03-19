@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com Bootstrap</title>
+    <!-- Inclua o CSS do Bootstrap via CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5 col-lg-4">
+        <img src="../../static/images/collab2us.png" alt="Logo" style="max-width: 100%;" class="mb-4">
+        <h2>Collab2US Connection</h2>
+        <form method="POST" action="/submit">
+            <div class="form-group">
+                <label for="api_key">Miro Token:</label>
+                <input type="text" class="form-control" id="miro_token" name="miro_token">
+            </div>
+            <div class="form-group">
+                <label for="token">Trello API Key:</label>
+                <input type="text" class="form-control" id="trello_key" name="trello_key">
+                <label for="token">Trello Token:</label>
+                <input type="text" class="form-control" id="trello_token" name="trello_token">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- Inclua o JavaScript do Bootstrap e suas dependências via CDN no final do body -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
