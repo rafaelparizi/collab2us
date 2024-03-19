@@ -217,8 +217,7 @@ def about():
     dados_acesso = extrair_dados(access_token)
     return render_template("/pages/about.html", dados_usuario=dados_acesso)
 
-if __name__ == "__main__":
-    app.run(debug=True)
+
 
 
 
