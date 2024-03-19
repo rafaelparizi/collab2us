@@ -201,15 +201,15 @@ def user_stories():
     return render_template('/pages/user_stories.html', stickers_personas=list_of_stickers_personas, stickers_features=list_of_stickers_features, stickers_pbi=list_of_stickers_pbi, dados_usuario=extrair_dados(access_token), user_stories_created = user_stories_created, board_name=board_name)
 
 
-@app.route("/export_to_trello", methods=['GET'])
-def export_to_trello():
-    dados_usuario_json = request.args.get('dados_usuario')
-    dados_usuario = json.loads(dados_usuario_json)
-    # print('Dados de acesso!')
-    # print(dados_usuario['user'])
-    # dados_acesso = extrair_dados(access_token)
-    # print('Exporting to Trello')
-    return render_template('/pages/export_to_trello.html', dados_usuario=dados_usuario)
+# @app.route("/export_to_trello", methods=['GET'])
+# def export_to_trello():
+#     dados_usuario_json = request.args.get('dados_usuario')
+#     dados_usuario = json.loads(dados_usuario_json)
+#     # print('Dados de acesso!')
+#     # print(dados_usuario['user'])
+#     # dados_acesso = extrair_dados(access_token)
+#     # print('Exporting to Trello')
+#     return render_template('/pages/export_to_trello.html', dados_usuario=dados_usuario)
 
 
 @app.route("/about")
